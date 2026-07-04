@@ -10,7 +10,9 @@
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0f172a; 
+            /* Carrega a foto dos ônibus como fundo de tela cheia */
+            background: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.6)), url('fundo_tela.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: #f8fafc;
             display: block;
             margin: 0;
@@ -30,11 +32,12 @@
         .container {
             max-width: 550px;
             margin: 0 auto;
-            background: #1e293b; 
-            padding: 45px 30px; /* Reduzido levemente o padding lateral para dar mais espaço em celulares */
+            background: rgba(30, 41, 59, 0.93); /* Levemente transparente para efeito moderno */
+            padding: 45px 30px;
             border-radius: 12px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
-            border: 1px solid #334155;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(51, 65, 85, 0.8);
+            backdrop-filter: blur(4px); /* Suaviza o fundo atrás do card */
         }
         .logo-container {
             margin-bottom: 25px;
@@ -66,17 +69,15 @@
             letter-spacing: -0.5px;
         }
         p {
-            color: #94a3b8;
+            color: #cbd5e1;
             font-size: 15px;
             line-height: 1.6;
             margin: 0 0 20px 0;
         }
         p.highlight {
-            color: #cbd5e1;
+            color: #ffffff;
             font-weight: 500;
         }
-        
-        /* Seção de contatos corrigida para mobile */
         .contact-info {
             background-color: #0f172a;
             border-radius: 8px;
@@ -91,7 +92,7 @@
             font-size: 14px;
             color: #cbd5e1;
             margin: 12px 0;
-            flex-wrap: wrap; /* Permite que o link desça caso não caiba na largura */
+            flex-wrap: wrap;
         }
         .contact-item .icon {
             margin-right: 10px;
@@ -99,28 +100,26 @@
             line-height: 1.4;
         }
         .contact-item strong {
-            white-space: nowrap; /* Impede que "E-mail:" ou "Fone:" quebrem no meio */
+            white-space: nowrap;
             margin-right: 6px;
         }
         .contact-item a {
             color: #38bdf8;
             text-decoration: none;
             font-weight: 500;
-            word-break: break-all; /* Evita que e-mails gigantes estourem a caixa */
+            word-break: break-all;
         }
         .contact-item a:hover {
             text-decoration: underline;
         }
-        
         .footer {
             margin-top: 40px;
             font-size: 12px;
-            color: #64748b;
+            color: #94a3b8;
             border-top: 1px solid #334155;
             padding-top: 20px;
             line-height: 1.5;
         }
-        /* Evita quebras esquisitas no nome do rodapé */
         .footer-highlight {
             color: #38bdf8;
             font-weight: 500;
@@ -148,7 +147,7 @@
                 
                 <p>O acesso será restabelecido em breve. Agradecemos a compreensão e a paciência de todos os nossos clientes e parceiros.</p>
                 
-                <!-- SEÇÃO DE CONTATO AJUSTADA -->
+                <!-- SEÇÃO DE CONTATO -->
                 <div class="contact-info">
                     <div class="contact-item">
                         <span class="icon">✉️</span> 
@@ -160,9 +159,9 @@
                     </div>
                 </div>
 
-                <!-- RODAPÉ AJUSTADO -->
+                <!-- RODAPÉ -->
                 <div class="footer">
-                    &copy; 2026 GERTAXI. All Rights Reserved. | Desenvolvido por <br style="display:none;"><span class="footer-highlight">ANDRÉ GUIMARÃES</span>.
+                    &copy; 2026 Todos os direitos reservados. <br style="display:none;"><span class="footer-highlight">ANDRÉ GUIMARÃES</span>.
                 </div>
             </div>
         </div>
