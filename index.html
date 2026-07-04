@@ -10,13 +10,29 @@
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.5)), url('fundo_tela.jpg') no-repeat center center fixed;
-            background-size: cover;
             color: #f8fafc;
             display: block;
             margin: 0;
             padding: 0;
+            background-color: #0f172a; /* Cor de fundo base caso a imagem demore a carregar */
+            position: relative;
+            min-height: 100vh;
         }
+        
+        /* Camada isolada para a imagem de fundo com desfoque sutil */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.5)), url('fundo_tela.jpg') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(2px); /* Desfoque bem leve e sutil na imagem dos ônibus */
+            z-index: -1; /* Garante que fique atrás de todo o conteúdo */
+        }
+
         .wrapper {
             min-height: 100vh;
             display: table;
@@ -32,14 +48,14 @@
             max-width: 550px;
             margin: 0 auto;
             /* Efeito Vidro Embaçado (Glassmorphism) */
-            background: rgba(30, 41, 59, 0.45); /* Reduzida a opacidade do fundo cinza */
-            backdrop-filter: blur(16px);        /* Aumentado o desfoque de fundo para efeito embaçado */
-            -webkit-backdrop-filter: blur(16px); /* Suporte para navegadores baseados em Safari */
+            background: rgba(30, 41, 59, 0.45); 
+            backdrop-filter: blur(16px);        
+            -webkit-backdrop-filter: blur(16px); 
             
             padding: 45px 30px;
             border-radius: 12px;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil reflexiva */
+            border: 1px solid rgba(255, 255, 255, 0.1); 
         }
         .logo-container {
             margin-bottom: 25px;
@@ -77,9 +93,9 @@
             margin: 0 0 20px 0;
         }
 
-        /* Nova seção da Barra de Carregamento / Verificação */
+        /* Seção da Barra de Carregamento / Verificação */
         .loader-container {
-            background-color: rgba(15, 23, 42, 0.6); /* Leve transparência interna também */
+            background-color: rgba(15, 23, 42, 0.6); 
             border-radius: 8px;
             padding: 20px;
             margin: 30px 0 10px 0;
@@ -137,7 +153,7 @@
             line-height: 1.5;
         }
         .footer-highlight {
-            color: #f87171; /* Mantido o vermelho claro */
+            color: #f87171; 
             font-weight: 600; 
             white-space: nowrap; 
         }
