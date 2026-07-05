@@ -14,12 +14,11 @@
             display: block;
             margin: 0;
             padding: 0;
-            background-color: #0f172a; /* Cor de fundo base caso a imagem demore a carregar */
+            background-color: #0f172a; 
             position: relative;
             min-height: 100vh;
         }
         
-        /* Camada isolada para a imagem de fundo com desfoque sutil */
         body::before {
             content: "";
             position: fixed;
@@ -29,8 +28,8 @@
             height: 100%;
             background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.5)), url('fundo_tela.jpg') no-repeat center center fixed;
             background-size: cover;
-            filter: blur(2px); /* Desfoque bem leve e sutil na imagem dos ônibus */
-            z-index: -1; /* Garante que fique atrás de todo o conteúdo */
+            filter: blur(2px); 
+            z-index: -1; 
         }
 
         .wrapper {
@@ -47,7 +46,6 @@
         .container {
             max-width: 550px;
             margin: 0 auto;
-            /* Efeito Vidro Embaçado (Glassmorphism) */
             background: rgba(30, 41, 59, 0.45); 
             backdrop-filter: blur(16px);        
             -webkit-backdrop-filter: blur(16px); 
@@ -93,7 +91,6 @@
             margin: 0 0 20px 0;
         }
 
-        /* Seção da Barra de Carregamento / Verificação */
         .loader-container {
             background-color: rgba(15, 23, 42, 0.6); 
             border-radius: 8px;
@@ -133,7 +130,6 @@
             box-shadow: 0 0 10px #38bdf8;
         }
 
-        /* Animações da barra e do texto */
         @keyframes loading {
             0% { left: -40%; width: 30%; }
             50% { width: 40%; }
@@ -145,7 +141,7 @@
         }
 
         .footer {
-            margin-top: 40px;
+            margin-top: 25px; /* Reduzido de 40px para subir a linha do copyright */
             font-size: 12px;
             color: #94a3b8;
             border-top: 1px solid rgba(51, 65, 85, 0.5);
