@@ -30,6 +30,7 @@
             background-size: cover;
             filter: blur(2px); 
             z-index: -1; 
+            pointer-events: none; /* CORREÇÃO: Faz os cliques passarem direto pelo fundo */
         }
 
         .wrapper {
@@ -37,6 +38,8 @@
             display: table;
             width: 100%;
             padding: 20px;
+            position: relative; /* Garante posicionamento correto */
+            z-index: 10;        /* Coloca todo o conteúdo acima do fundo */
         }
         .cell {
             display: table-cell;
@@ -149,15 +152,17 @@
             line-height: 1.5;
         }
         
-        /* Ajuste final da cor do link para manter o vermelho-claro */
         .footer-link {
             color: #f87171; 
             font-weight: 600; 
             white-space: nowrap;
-            text-decoration: none; /* Remove o sublinhado padrão */
+            text-decoration: none;
+            position: relative; /* Garante comportamento correto do elemento de link */
+            z-index: 20;        
+            cursor: pointer;    /* Força o cursor da mãozinha de clique */
         }
         .footer-link:hover {
-            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+            text-decoration: underline; 
         }
     </style>
 </head>
@@ -190,7 +195,6 @@
 
                 <div class="footer">
                     &copy; 2026 GERTAXI. All Rights Reserved. | Desenvolvido por <br style="display:none;">
-                    <!-- Link do LinkedIn inserido aqui -->
                     <a href="https://www.linkedin.com/in/andr3guimara3s/" target="_blank" class="footer-link">ANDRÉ GUIMARÃES</a>
                 </div>
             </div>
